@@ -1,4 +1,7 @@
+import random
 box(pos=vec(0,0,-0.1),color=color.yellow,size=vec(20,13,0.1))
+x=['너 나 좋아해?','나랑 한번 만나볼래?']
+t = label(text = '',pos=vec(0,-5,0), color=color.red)
 while True:
     rate(100)
     k = keysdown()
@@ -6,7 +9,7 @@ while True:
         box(texture='https://i.postimg.cc/T1fFDfNy/unnamed.png',size=vec(1,1,0.1))
         box(color=color.white,pos=vec(-5,-5,0.2),size=vec(4,2,0.1))   
         box(color=color.white,pos=vec(5,-5,0.2),size=vec(4,2,0.1))
-    
+        t.text = x[random.randint(0,1)]
     if 'a' in k :
         box(color=color.blue,size=vec(20,13,0.1),pos=vec(0,0,0.4))
         box(color=color.white,pos=vec(-5,-5,0.5),size=vec(4,2,0.1))   
