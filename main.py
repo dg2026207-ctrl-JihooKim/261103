@@ -34,3 +34,24 @@ while True:
              box(color=color.skyblue,size=vec(20,13,0.1),pos=vec(0,0,0.6))
              box(color=color.white,pos=vec(-5,-5,0.7),size=vec(4,2,0.1))   
              box(color=color.white,pos=vec(5,-5,0.7),size=vec(4,2,0.1))     
+
+
+
+
+
+
+
+import random
+box(pos=vec(0,0,-0.1),color=color.yellow,size=vec(4,3,0.1))
+x=['너 나 좋아해?','나랑 한번 만나볼래?']
+t = label(text = '',pos=vec(0,-5,0), color=color.red)
+tt = ['https://i.postimg.cc/T1fFDfNy/unnamed.png', textures.earth]
+bb = box(size=vec(4,3,0.1),pos=vec(0,0,0))
+cnt = 0
+while True:
+    rate(100)
+    k = keysdown()
+    if ' ' in k :
+        rate(1)
+        bb.texture = tt[cnt]
+        cnt = cnt + 1
